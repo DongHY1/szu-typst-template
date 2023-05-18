@@ -346,43 +346,7 @@
     left: 3cm,
     right: 3cm
   ))
-  // align(right)[
-  //   #let header_value(body) = {
-  //     rect(
-  //       width: 100%,
-  //       inset: 2pt,
-  //       stroke: (
-  //         bottom: 1pt + black
-  //       ),
-  //       text(
-  //         font: zhongsong,
-  //         size: 12pt,
-  //         bottom-edge: "descender"
-  //       )[
-  //         #body
-  //       ]
-  //     ) 
-  //   }
-    
-  //   #let header_key(body) = {
-  //     rect(width: 100%, inset: 2pt, 
-  //      stroke: none,
-  //      text(
-  //       font: zhongsong,
-  //       size: 12pt,
-  //       body
-  //     ))
-  //   }
 
-  //   #grid(
-  //     columns: (120pt, 60pt),
-  //     gutter: 3pt,
-  //     header_key("学校代码"),
-  //     header_value(10590),
-  //     header_key("密 级"),
-  //     header_value("公开"),
-  //   )
-  // ]
   // 封面
   align(center)[
     // 预先定义
@@ -439,17 +403,17 @@
         body
       ))
     }
-
-    #align(left)[
-      #grid(
-        columns: (120pt,120pt),
-        gutter: 3pt,
-        header_key("分类号"),
-        header_value("TB32"),
-        header_key("U D C"),
-        header_value(62)
-      )
-    ]
+  #grid(
+    columns: (1fr, 1fr),
+    align(left)[
+    #header_key("分类号")
+    #header_key("U D C")
+  ],
+  align(right)[
+    #header_key("学校代码")
+    #header_key("密   级")
+  ]
+)
 
     #v(50pt)
 
